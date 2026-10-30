@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Rafli Roberto Lumbantobing - Portfolio</title>
+    <style>
+
+        :root {
+            --primary-color: #4A5340;
+            --secondary-color: #8C6239; 
+            --bg-light: #F9F6F0; 
+            --bg-white: #FFFFFF;
+            --text-dark: #2C2C2C;
+            --text-muted: #555555;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-light);
+            color: var(--text-dark);
+            line-height: 1.6;
+        }
+
+        header {
+            background-color: var(--primary-color);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1100px;
+            margin: 0 auto;
+            padding: 15px 20px;
+        }
+
+        nav .logo {
+            color: var(--bg-light);
+            font-weight: bold;
+            font-size: 1.2rem;
+            text-decoration: none;
+            letter-spacing: 1px;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            margin: 0;
+            padding: 0;
+            gap: 20px;
+        }
+
+        nav ul li a {
+            color: var(--bg-light);
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.3s;
+            font-size: 0.95rem;
+        }
+
+        nav ul li a:hover {
+            color: var(--secondary-color);
+        }
+
+        section {
+            padding: 80px 20px;
+            max-width: 900px;
+            margin: 0 auto;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 10px;
+            margin-bottom: 30px;
+            font-size: 2rem;
+        }
+
+        .about-container {
+            display: flex;
+            align-items: center;
+            gap: 40px;
+        }
+
+        .profile-img {
+            width: 220px;
+            height: 220px;
+            object-fit: cover;
+            border-radius: 50%;
+            border: 4px solid var(--secondary-color);
+            box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+            flex-shrink: 0;
+        }
+
+        .card {
+            background-color: var(--bg-white);
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            margin-bottom: 20px;
+            border-left: 4px solid var(--secondary-color);
+        }
+
+        .card h3 {
+            margin-top: 0;
+            color: var(--primary-color);
+            margin-bottom: 5px;
+        }
+
+        .date-location {
+            font-size: 0.9rem;
+            color: var(--secondary-color);
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        ul.bullet-list {
+            padding-left: 20px;
+            color: var(--text-muted);
+        }
+
+        .skills-container {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 20px;
+        }
+
+        .skill-tag {
+            display: inline-block;
+            background-color: var(--primary-color);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            margin: 5px 5px 5px 0;
+        }
+
+
+        #contact {
+            text-align: center;
+            background-color: var(--bg-white);
+            padding: 80px 20px;
+            border-radius: 8px;
+            margin-top: 40px;
+            margin-bottom: 80px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+        }
+
+        .cta-button {
+            display: inline-block;
+            background-color: var(--secondary-color);
+            color: white;
+            padding: 12px 30px;
+            text-decoration: none;
+            border-radius: 25px;
+            font-weight: bold;
+            margin-top: 20px;
+            transition: background-color 0.3s;
+        }
+
+        .cta-button:hover {
+            background-color: #6d4b29;
+        }
+
+        .contact-links {
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        .contact-links a {
+            color: var(--primary-color);
+            text-decoration: none;
+            font-weight: 500;
+        }
+
+        .contact-links a:hover {
+            text-decoration: underline;
+        }
+
+        footer {
+            text-align: center;
+            padding: 20px;
+            background-color: var(--primary-color);
+            color: var(--bg-light);
+            font-size: 0.9rem;
+        }
+
+
+        @media (max-width: 768px) {
+            nav ul {
+                display: none;
+            }
+            .about-container {
+                flex-direction: column;
+                text-align: center;
+            }
+            .skills-container {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <nav>
+            <a href="#" class="logo">Rafli Roberto</a>
+            <ul>
+                <li><a href="#about">About Me</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#skills">Skills</a></li>
+                <li><a href="#experience">Experience</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="about">
+        <h2 class="section-title">About Me</h2>
+        <div class="about-container">
+            <img src="c:\Users\Asus\OneDrive\Dokumen\rafli\fotoprofilraf.jpg.jpeg" alt="Rafli Roberto Lumbantobing" class="profile-img">
+            
+            <div class="about-text">
+                <p><strong>I turn client conversations into measurable results.</strong></p>
+                <p>I am a target-driven Digital Business undergraduate at Universitas Cakrawala with hands-on experience in telemarketing, debt collection, and consultative sales. Over the past year, I have built a proven track record in conducting high-impact client negotiations, executing structured outbound communication, and consistently exceeding key performance indicators (KPIs) across banking, fintech, and automotive sectors.</p>
+                <p>I want to bring that field experience into business analysis and development—using market data and clear communication to help teams make better decisions. Outside class, I enjoy sports and music, which have taught me the value of discipline and teamwork.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="education">
+        <h2 class="section-title">Education</h2>
+        
+        <div class="card">
+            <h3>Bachelor of Science in Digital Business</h3>
+            <div class="date-location">Universitas Cakrawala | Jan 2025 - Present (Semester 2) | Medan, Indonesia</div>
+            <p><strong>Key Coursework & Focus:</strong> Digital Business Strategy, Business Negotiation, Consumer Behavior, Financial Data Analysis, digital market strategy, and business analysis.</p>
+        </div>
+
+        <div class="card">
+            <h3>High School Diploma (Social Sciences / IPS)</h3>
+            <div class="date-location">SMAN 2 Tarutung | Graduated May 2024</div>
+        </div>
+    </section>
+
+    <section id="skills">
+        <h2 class="section-title">Skills & Competencies</h2>
+        <div class="skills-container">
+            <div class="card">
+                <h3>Professional Skills</h3>
+                <div>
+                    <span class="skill-tag">Consultative Selling</span>
+                    <span class="skill-tag">Lead Qualification</span>
+                    <span class="skill-tag">High-Stakes Negotiation</span>
+                    <span class="skill-tag">Problem Solving</span>
+                    <span class="skill-tag">Market Analysis</span>
+                    <span class="skill-tag">Client Acquisition</span>
+                    <span class="skill-tag">Debt Restructuring</span>
+                    <span class="skill-tag">Pipeline Management</span>
+                </div>
+            </div>
+            <div class="card">
+                <h3>Technical Tools & Languages</h3>
+                <div>
+                    <span class="skill-tag">Microsoft Excel</span>
+                    <span class="skill-tag">Microsoft Word</span>
+                    <span class="skill-tag">PowerPoint</span>
+                    <span class="skill-tag">Canva</span>
+                    <span class="skill-tag">CRM / Database Management</span>
+                </div>
+                <h4 style="margin-top: 15px; color: var(--primary-color);">Languages</h4>
+                <p style="margin: 5px 0;">Indonesian (Native), English (Proficient)</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <h2 class="section-title">Professional Experience</h2>
+
+        <div class="card">
+            <h3>Sales Consultant</h3>
+            <div class="date-location">PT Kreasi Auto Kencana (Ford Motor Company) | Sep 2025 - Dec 2025</div>
+            <ul class="bullet-list">
+                <li>Executed consultative client discovery processes by identifying buyer automotive specifications.</li>
+                <li>Conducted live product demonstrations and test drives using clear value-proposition frameworks.</li>
+                <li>Converted over 15% of prospective lead inquiries into closed sales.</li>
+                <li>Maintained structured client engagement pipelines using Microsoft Excel tracking databases.</li>
+                <li>Named Sales of the Month and closed a corporate vehicle procurement partnership.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Desk Collection Specialist</h3>
+            <div class="date-location">Indodana | May 2025 - Aug 2025</div>
+            <ul class="bullet-list">
+                <li>Managed high-volume outbound negotiations to resolve overdue credit accounts.</li>
+                <li>Exceeded monthly financial recovery targets by systematically prioritizing delinquent accounts.</li>
+                <li>Mitigated client account escalations by 20% through structured problem-solving and firm negotiation.</li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <h3>Telemarketing Representative</h3>
+            <div class="date-location">Bank DBS | Jul 2024 - Nov 2024</div>
+            <ul class="bullet-list">
+                <li>Engaged 50+ prospective clients daily using standardized call scripts to pitch financial products.</li>
+                <li>Qualified client leads by analyzing financial profiles against internal banking benchmarks.</li>
+                <li>Achieved target account acquisition metrics by systematically handling customer objections.</li>
+            </ul>
+        </div>
+    </section>
+
+    <section id="projects">
+        <h2 class="section-title">Key Projects</h2>
+        
+        <div class="card">
+            <h3>Corporate Vehicle Procurement Deal</h3>
+            <div class="date-location">Role: Sales Consultant</div>
+            <p><strong>Problem:</strong> A company needed vehicles for its operations.</p>
+            <p><strong>Action:</strong> Ran the client discovery session, matched models to their needs, and negotiated the terms.</p>
+            <p><strong>Result:</strong> Successfully closed a corporate fleet procurement partnership.</p>
+        </div>
+
+        <div class="card">
+            <h3>Daily Outbound Pipeline Management</h3>
+            <div class="date-location">Role: Telemarketing Representative</div>
+            <p><strong>Problem:</strong> Needed to reach and qualify enough prospects every day to keep the sales pipeline full.</p>
+            <p><strong>Action:</strong> Called 50+ prospects a day with structured scripts, screened financial profiles, and tracked leads in Excel.</p>
+            <p><strong>Result:</strong> Maintained a steady flow of qualified leads for the sales team.</p>
+        </div>
+    </section>
+
+    <section id="contact">
+        <h2 class="section-title" style="border:none; margin-bottom: 10px;">Let's Connect</h2>
+        <p>I'm currently seeking a one-year Business Analyst internship or entry-level Business Development roles.</p>
+        <p>The fastest way to reach me is via email.</p>
+        
+        <a href="mailto:raflilumbantobing@gmail.com" class="cta-button">Email Me</a>
+        
+        <div class="contact-links">
+            <a href="mailto:raflilumbantobing@gmail.com">raflilumbantobing@gmail.com</a> | 
+            <a href="tel:+6285371223200">+62 853-7122-3200</a> | 
+            <a href="https://linkedin.com/in/rafli-lumbantobing" target="_blank">LinkedIn</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2026 Rafli Roberto Lumbantobing. All rights reserved.</p>
+    </footer>
+
+</body>
+</html>
+```<FollowUp></FollowUp><ElicitationsGroup></ElicitationsGroup>
